@@ -29,8 +29,6 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 <img src='http://i.imgur.com/wnJqDDd.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-![](http://www.reactiongifs.us/wp-content/uploads/2013/10/nuh_uh_conan_obrien.gif)
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
