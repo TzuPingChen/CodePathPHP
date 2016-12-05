@@ -14,7 +14,7 @@ The following **required** functionality is complete:
 * [ ] PHP code sets reasonable default values for the form.
 * [ ] PHP code confirms the presence and correct format of submitted values.
 * [ ] Page indicates any form errors which need to be fixed.
-* [ ] Submitted form values are retained when errors or results are shown.
+* [ ] Submitted form values are retained when errors or results are shown. (**NOT YET**)
 
 The following **optional** features are implemented:
 * [ ] Add support for custom tip percentage
