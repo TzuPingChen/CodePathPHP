@@ -1,0 +1,13 @@
+body {
+	background-color: powderblue; 
+}
+
+h1{
+	color:black;
+}
+
+form{
+	border: 1px solid yellow;
+	padding: 10px;
+	margin: 50px;
+}
