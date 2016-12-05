@@ -9,11 +9,11 @@ Time spent: 3 hours spent in total
 ## User Stories
 
 The following **required** functionality is complete:
-* [v] User can enter a bill amount, choose a tip percentage, and submit the form to see the tip and total values.
-* [v] Tip percentage choices use a PHP loop to output three radio buttons.
-* [v] PHP code sets reasonable default values for the form.
-* [v] PHP code confirms the presence and correct format of submitted values.
-* [v] Page indicates any form errors which need to be fixed.
+* [ ] User can enter a bill amount, choose a tip percentage, and submit the form to see the tip and total values.
+* [ ] Tip percentage choices use a PHP loop to output three radio buttons.
+* [ ] PHP code sets reasonable default values for the form.
+* [ ] PHP code confirms the presence and correct format of submitted values.
+* [ ] Page indicates any form errors which need to be fixed.
 * [ ] Submitted form values are retained when errors or results are shown.
 
 The following **optional** features are implemented:
