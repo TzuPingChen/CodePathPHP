@@ -14,12 +14,11 @@ The following **required** functionality is complete:
 * [ ] PHP code sets reasonable default values for the form.
 * [ ] PHP code confirms the presence and correct format of submitted values.
 * [ ] Page indicates any form errors which need to be fixed.
-* [ ] Submitted form values are retained when errors or results are shown. (**NOT YET**)
+* [ ] Submitted form values are retained when errors or results are shown. 
 
 The following **optional** features are implemented:
 * [ ] Add support for custom tip percentage
-* [ ] Add support for splitting the tip and total
-
+* [ ] Add support for splitting the tip and total (**NOT YET**)
 The following **additional** features are implemented:
 
 * [ ] List anything else that you can get done to improve the functionality!
