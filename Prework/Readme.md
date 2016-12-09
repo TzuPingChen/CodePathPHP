@@ -33,8 +33,9 @@ Here's a walkthrough of implemented user stories:
 ## Notes
 
 Challenge is to use PHP itself since I'm not that familiar with it.
-Creating a server is necessary before debugging PHP code. That's fun.
+Creating a server is necessary before debugging PHP code. 
 
+I'll describe this application as a fun and stressless practice.
 ## License
 
     Copyright [Tzu-Ping,Chen]
