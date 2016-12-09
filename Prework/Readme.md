@@ -37,7 +37,7 @@ Creating a server is necessary before debugging PHP code. That's fun.
 
 ## License
 
-    Copyright [Tzu-Ping,Chen] [name of copyright owner]
+    Copyright [Tzu-Ping,Chen]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
