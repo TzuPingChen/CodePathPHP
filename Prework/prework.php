@@ -6,50 +6,64 @@
 <body style= "background-color: powderblue;">
 
 <h2>Tip Calculator</h2>
+<?php 
+$returnStlye1 = "border: 1px solid black";
+$returnStlye2 = "border: 1px solid black";
+$returnStlye3 = "border: 1px solid black";
+if(isset($_POST["Money"])){
+    if(is_numeric($_POST["Money"])){
+        if(isset($_POST["tips"])){
+            if(is_numeric($_POST["Split"])and $_POST["Split"]!=0){
+                
+                $selectoption = $_POST["tips"];
+                $money = $_POST["Money"];
+                $person = $_POST["Split"];
+
+                if($selectoption == 0){
+                    if (is_numeric($_POST["custom"])&&$_POST["custom"]>=0){
+                        $selectoption = ($_POST["custom"]/100);
+                        $tipsonly = $money*$selectoption;
+                        $totalpayment = $money*($selectoption+1);
+                    }else{
+                        echo '<p>'."Please enter a valid number of tip "."</p>\n";
+                        $tipsonly = "Error!(Custom tip should be numbers larger(equal) to 0)";
+                        $totalpayment = "Error!(Custom tip should be numbers larger(equal) to 0)";
+                    }
+                }else{
+                $tipsonly = $money * $selectoption;
+                $totalpayment = $money * ($selectoption+1) ;
+                }
+                echo '<p>'."Your input Bill :".$_POST["Money"]."</p>\n";
+                echo '<p>'."Your tip % :".$selectoption."</p>\n";
+                echo '<p>'."Tips :".$tipsonly."</p>\n";
+                echo "Total payment :".$totalpayment."</p>\n";
+                echo "Each person should pay:".$totalpayment/$person;
+                $returnStlye1 = "border: 1px solid green";
+                $returnStlye2 = "border: 1px solid green";
+                $returnStlye3 = "border: 1px solid green";
+
+            }else {echo "please Enter a valid number of person";
+            $returnStlye2 = "background-color: red;";}
+		}else {echo "please select your tip option";
+        $returnStlye1 = "background-color: red;";   }
+    }else {echo "Please enter a valid bill number";
+    $returnStlye3 = "background-color: red;";}
+}else {echo "please type your bill";}
+?>
 <form action="prework.php" method="POST">       
     Bill:
-    <input type="text" name="Money" value="0" /><br>
+    <input type="text" name="Money" style="<?php echo $returnStlye3; ?>" value="0" /><br>
     Tips:<br>
     <input type="radio" name="tips" value="0.1">10%<br>
     <input type="radio" name="tips" value="0.15">15%<br>
     <input type="radio" name="tips" value="0.2">20%<br>
-    <input type="radio" name="tips" value="0">Tips(%):<input type="text" name="custom" value = "0"><br>
-         
+    <input type="radio" name="tips" value="0">Tips(%):<input type="text" name="custom" style="<?php echo $returnStlye1; ?>" value = "0"><br>
+    Split: <input type="text" name="Split" style="<?php echo $returnStlye2; ?>" value="0"/>person(s)<br><br>    
     <input type="submit" value="Calculate">
-         
+
 
         
 </form>
-
-<?php 
-if(isset($_POST["Money"])){
-    if(is_numeric($_POST["Money"])){
-    	if(isset($_POST["tips"])){
-			$selectoption = $_POST["tips"];
-			$money = $_POST["Money"];
-
-            if($selectoption == 0){
-                if (is_numeric($_POST["custom"])&&$_POST["custom"]>=0){
-                    $selectoption = ($_POST["custom"]/100);
-                    $tipsonly = $money*$selectoption;
-                    $totalpayment = $money*($selectoption+1);
-                }else{
-                    echo '<p>'."Please enter a valid number of tip "."</p>\n";
-                    $tipsonly = "Error!(Custom tip should be numbers larger(equal) to 0)";
-                    $totalpayment = "Error!(Custom tip should be numbers larger(equal) to 0)";
-                }
-            }else{
-			$tipsonly = $money * $selectoption;
-			$totalpayment = $money * ($selectoption+1) ;
-            }
-            echo '<p>'."Your input Bill :".$_POST["Money"]."</p>\n";
-            echo '<p>'."Your tip % :".$selectoption."</p>\n";
-			echo '<p>'."Tips :".$tipsonly."</p>\n";
-			echo "Total payment :".$totalpayment;
-		}else echo "please select your tip option";	
-    }else echo "Please enter a valid bill number";
-}else echo "please type your bill";
-?>
 
 </body>
 </html>
