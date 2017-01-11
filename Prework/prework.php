@@ -7,9 +7,11 @@
 
 <h2>Tip Calculator</h2>
 <?php 
-$returnStlye1 = "border: 1px solid black";
-$returnStlye2 = "border: 1px solid black";
-$returnStlye3 = "border: 1px solid black";
+$returnStyle1 = "border: 1px solid black";
+$returnStyle2 = "border: 1px solid black";
+$returnStyle3 = "border: 1px solid black";
+$returnStyle4 = "border: 1px solid black";
+
 if(isset($_POST["Money"])){
     if(is_numeric($_POST["Money"])){
         if(isset($_POST["tips"])){
@@ -26,6 +28,7 @@ if(isset($_POST["Money"])){
                         $totalpayment = $money*($selectoption+1);
                     }else{
                         echo '<p>'."Please enter a valid number of tip "."</p>\n";
+                        $returnStyle4 = "background-color:red";
                         $tipsonly = "Error!(Custom tip should be numbers larger(equal) to 0)";
                         $totalpayment = "Error!(Custom tip should be numbers larger(equal) to 0)";
                     }
@@ -41,24 +44,25 @@ if(isset($_POST["Money"])){
                 $returnStlye1 = "border: 1px solid green";
                 $returnStlye2 = "border: 1px solid green";
                 $returnStlye3 = "border: 1px solid green";
+                $returnStlye4 = "border: 1px solid green";
 
             }else {echo "please Enter a valid number of person";
-            $returnStlye2 = "background-color: red;";}
+            $returnStyle2 = "background-color: red;";}
 		}else {echo "please select your tip option";
-        $returnStlye1 = "background-color: red;";   }
+        $returnStyle1 = "border: 1px solid red";   }
     }else {echo "Please enter a valid bill number";
-    $returnStlye3 = "background-color: red;";}
+    $returnStyle3 = "background-color: red;";}
 }else {echo "please type your bill";}
 ?>
 <form action="prework.php" method="POST">       
     Bill:
-    <input type="text" name="Money" style="<?php echo $returnStlye3; ?>" value="0" /><br>
-    Tips:<br>
+    <input type="text" name="Money" style="<?php echo $returnStyle3; ?>" value="0" /><br>
+    <p style="<?php echo $returnStyle1; ?>">Tips:<br>
     <input type="radio" name="tips" value="0.1">10%<br>
     <input type="radio" name="tips" value="0.15">15%<br>
     <input type="radio" name="tips" value="0.2">20%<br>
-    <input type="radio" name="tips" value="0">Tips(%):<input type="text" name="custom" style="<?php echo $returnStlye1; ?>" value = "0"><br>
-    Split: <input type="text" name="Split" style="<?php echo $returnStlye2; ?>" value="0"/>person(s)<br><br>    
+    <input type="radio" name="tips" value="0">Tips(%):<input type="text" name="custom" style="<?php echo $returnStyle4; ?>" value = "0"><br></p>
+    Split: <input type="text" name="Split" style="<?php echo $returnStyle2; ?>" value="1"/>person(s)<br><br>    
     <input type="submit" value="Calculate">
 
 
